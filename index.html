@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alberte &amp; Martin — 17. oktober 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf9f7;
+      --sand:  #ede9e3;
+      --gold:  #b89a6a;
+      --text:  #2c2c2c;
+      --muted: #7a7570;
+      --max:   680px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--sand);
+      z-index: 100;
+      padding: 0 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.9rem 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--gold); }
+
+    /* ── PARKING IMAGE ── */
+    .parking-img {
+      width: 100%;
+      border-radius: 4px;
+      margin: 1.5rem 0 1rem;
+      display: block;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+      border-bottom: 1px solid var(--sand);
+    }
+    .hero .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 4rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+    .hero .ampersand { color: var(--gold); }
+    .hero .date-line {
+      margin-top: 1.4rem;
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2rem auto;
+    }
+    .hero p {
+      max-width: 480px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      border-bottom: 1px solid var(--sand);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ── INFO GRID ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .info-card {
+      background: var(--sand);
+      border-radius: 4px;
+      padding: 1.4rem 1.2rem;
+    }
+    .info-card .card-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .info-card p { font-size: 0.95rem; line-height: 1.5; }
+
+    /* ── PROGRAM ── */
+    .program-list { list-style: none; }
+    .program-list li {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--sand);
+      align-items: start;
+    }
+    .program-list li:last-child { border-bottom: none; }
+    .program-time {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      padding-top: 0.15rem;
+      white-space: nowrap;
+    }
+    .program-item strong { display: block; font-size: 1rem; font-weight: 600; }
+    .program-item span { font-size: 0.9rem; color: var(--muted); }
+
+    /* ── PRACTICAL ── */
+    .practical-block { margin-bottom: 2.5rem; }
+    .practical-block:last-child { margin-bottom: 0; }
+    .practical-block h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .practical-block p, .practical-block ul {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .practical-block ul { padding-left: 1.2rem; }
+    .practical-block ul li { margin-bottom: 0.3rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      border-top: 1px solid var(--sand);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#info">Praktisk</a></li>
+    <li><a href="#program">Program</a></li>
+    <li><a href="#born">Små børn</a></li>
+    <li><a href="#overnatning">Overnatning &amp; transport</a></li>
+    <li><a href="#parkering">Parkering</a></li>
+    <li><a href="#gaveonsker">Gaveønsker</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="eyebrow">Vi gifter os</p>
+  <h1>Alberte <span class="ampersand">&amp;</span> Martin</h1>
+  <p class="date-line">Lørdag den 17. oktober 2026 · Roskilde</p>
+  <div class="divider"></div>
+  <p>
+    Vi er utrolig glade for at fejre denne dag med jer alle.
+    Her finder I alt, hvad I har brug for at vide om dagen.
+  </p>
+</header>
+
+<!-- PRAKTISK INFO -->
+<section id="info">
+  <p class="section-label">Praktisk</p>
+  <h2>Dagen i korte træk</h2>
+  <p>Vielsen finder sted i Sankt Jørgensbjerg Kirke, og festen holdes bagefter på Kattinge Værk. Vi glæder os til at se jer!</p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <p class="card-label">Dato</p>
+      <p>Lørdag<br>17. oktober 2026</p>
+    </div>
+    <div class="info-card">
+      <p class="card-label">Vielse</p>
+      <p>Sankt Jørgensbjerg Kirke<br>Kl. 12:00<br>Kirkegade 26A, Roskilde</p>
+    </div>
+    <div class="info-card">
+      <p class="card-label">Fest</p>
+      <p>Kattinge Værk<br>Kl. 14:00<br>Boserupvej 150, Roskilde</p>
+    </div>
+    <div class="info-card">
+      <p class="card-label">Tilmelding</p>
+      <p>SU senest<br>1. juli 2026</p>
+    </div>
+    <div class="info-card">
+      <p class="card-label">Toastmaster</p>
+      <p>Mikkel Schiødt<br><a href="mailto:mikkelschiodt@yahoo.com">mikkelschiodt@yahoo.com</a><br>Tlf.: 53 61 84 83</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <p class="section-label">Program</p>
+  <h2>Dagens forløb</h2>
+
+  <ul class="program-list">
+    <li>
+      <span class="program-time">12:00</span>
+      <div class="program-item">
+        <strong>Vielse</strong>
+        <span>Sankt Jørgensbjerg Kirke, Kirkegade 26A, Roskilde.</span>
+      </div>
+    </li>
+    <li>
+      <span class="program-time">13:00</span>
+      <div class="program-item">
+        <strong>Transport</strong>
+        <span>Transport til Kattinge Værk, Boserupvej 150, Roskilde. Check ind på værelser for overnattende gæster.</span>
+      </div>
+    </li>
+    <li>
+      <span class="program-time">14:00</span>
+      <div class="program-item">
+        <strong>Velkomst</strong>
+        <span>Drinks og let mad. I dette tidsrum vil der også være plads til eventuelle indslag.</span>
+      </div>
+    </li>
+    <li>
+      <span class="program-time">18:00</span>
+      <div class="program-item">
+        <strong>Middag</strong>
+      </div>
+    </li>
+    <li>
+      <span class="program-time">21:00</span>
+      <div class="program-item">
+        <strong>Fest</strong>
+      </div>
+    </li>
+    <li>
+      <span class="program-time">09:00</span>
+      <div class="program-item">
+        <strong>Morgenmad — dagen efter</strong>
+        <span>For overnattende gæster serveres der morgenmad og kaffe dagen efter.</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- BØRN -->
+<section id="born">
+  <p class="section-label">Børnefamilier</p>
+  <h2>Til jer med små børn</h2>
+  <p>Vi vil meget gerne fejre dagen sammen med jer alle – også børnene – til både vielsen og receptionen på Kattinge Værk. Da der desværre er begrænsede siddepladser til middagen, er det kun voksne og børn der stadig ammer, som kan deltage i middagen.</p>
+</section>
+
+<!-- OVERNATNING & TRANSPORT -->
+<section id="overnatning">
+  <p class="section-label">Overnatning &amp; transport</p>
+  <h2>Kom nemt hjem — eller bliv natten over</h2>
+
+  <div class="practical-block">
+    <h3>Overnatning på Kattinge Værk</h3>
+    <p>
+      Der er mulighed for at sove på Kattinge Værk og starte søndagen med morgenmad kl. 09:00 sammen med os. Ved overnatning skal man selv medbringe dyne/hovedpude/sovepose samt sengetøj. Hvis I er interesserede, så skriv gerne inden SU hvor mange I bliver, så vi kan få lavet en værelsesplan.
+    </p>
+  </div>
+
+  <div class="practical-block">
+    <h3>Bus</h3>
+    <p>
+      Sidste bus mod Roskilde Station afgår kl. 22:22. Husk at tjekke rutetider hvis I planlægger at tage bussen hjem.
+    </p>
+  </div>
+
+  <div class="practical-block">
+    <h3>Tog</h3>
+    <p>
+      Der afgår tog fra Roskilde Station mod København hele natten. Tjek <a href="https://www.dsb.dk" target="_blank" rel="noopener" style="color:var(--gold)">dsb.dk</a> for rejsetider.
+    </p>
+  </div>
+
+  <div class="practical-block">
+    <h3>Taxa</h3>
+    <p>Dantaxi Roskilde — tlf.: 48 48 48 48</p>
+  </div>
+
+</section>
+
+<!-- PARKERING -->
+<section id="parkering">
+  <p class="section-label">Parkering</p>
+  <h2>Parkering ved Kattinge Værk</h2>
+  <p>Der er flere parkeringspladser i nærheden af Kattinge Værk. Markeret med BLÅT er Kattinge Værks egne P-pladser med 6–7 pladser. Ved Slusehuset (GULT) er der 4–5 pladser, og ved Skovparkeringspladsen (LILLA) findes 12+ pladser. Hvis alle disse pladser er optaget, kan man parkere ved Boserup Skov Vest, der ligger 1 km fra Kattinge Værk. Man må ikke parkere på vejen.</p>
+  <img src="Parkering.png" alt="Parkeringskort ved Kattinge Værk" class="parking-img" />
+</section>
+
+<section id="gaveonsker">
+  <p class="section-label">Gaveønsker</p>
+  <h2>Gaveønsker</h2>
+  <p>Der kommer gaveønsker senere 😉</p>
+</section>
+
+<footer>
+  <p>Alberte &amp; Martin · 17. oktober 2026</p>
+</footer>
+
+</body>
+</html>
